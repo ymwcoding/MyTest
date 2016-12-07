@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_project_file>
+	<EmBitzVersion release="1.00" revision="0" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="main" />
+		<Option pch_mode="2" />
+		<Option compiler="rlarm" />
+		<Build>
+			<Target title="SmartHead">
+				<Option output="main.axf" />
+				<Option object_output="..\Obj" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="rlarm" />
+				<Device>
+					<Add option='$device=&quot;Cortex-M3&quot;' />
+					<Add option="$scatter=..\Obj\main.sct" />
+				</Device>
+				<Compiler>
+					<Add option="--debug" />
+					<Add option="--apcs=interwork" />
+					<Add option="-O0" />
+					<Add symbol="USE_STDPERIPH_DRIVER," />
+					<Add symbol="STM32F10X_HD" />
+					<Add directory="$(TARGET_COMPILER_DIR)\..\INC\ST\STM32F10x\" />
+					<Add directory="..\User" />
+					<Add directory="..\STlib\MSIS" />
+					<Add directory="..\STlib\STM32F10x_StdPeriph_Driver\inc" />
+					<Add directory="..\HardDriver\can" />
+					<Add directory="..\HardDriver\delay" />
+					<Add directory="..\HardDriver\eye_led" />
+					<Add directory="..\HardDriver\usart3" />
+					<Add directory="..\HardDriver\touch_key" />
+					<Add directory="..\HardDriver\timer" />
+					<Add directory="..\App\app_init" />
+					<Add directory="..\App\can_deal" />
+					<Add directory="..\App\cmd_analyze" />
+					<Add directory="..\App\top_ear_led_control" />
+					<Add directory="..\App\eye_led_control" />
+					<Add directory="..\App\my_types" />
+					<Add directory="..\App\receive_ring_buffer" />
+					<Add directory="..\App\top_led_control" />
+					<Add directory="..\App\xf_voice" />
+					<Add directory="..\App\crc_lookup" />
+					<Add directory="..\App\cmd_execute" />
+					<Add directory="..\HardDriver\top_ear_led" />
+					<Add directory="..\HardDriver\watch_dog" />
+				</Compiler>
+				<Cpp>
+					<Add option="--debug" />
+					<Add option="--apcs=interwork" />
+					<Add option="-O0" />
+				</Cpp>
+				<Assembler>
+					<Add option="--debug" />
+					<Add option="--apcs=interwork" />
+				</Assembler>
+				<Linker>
+					<Add option="--strict" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f10x_it.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="config.h" />
+		<Unit filename="..\App\app_init\app_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\eye_led_control\eye_led_control.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\can_deal\can_receive.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\can_deal\can_send.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\receive_ring_buffer\receive_ring_buffer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\xf_voice\xf_voice.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\crc_lookup\crc_lookup.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\my_types\my_types.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\cmd_execute\cmd_execute.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\cmd_analyze\cmd_analyze.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\App\top_ear_led_control\top_ear_led_control.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\usart3\usart3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\can\can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\delay\delay.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\eye_led\eye_led.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\top_ear_led\top_ear_led.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\touch_key\touch_key.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\timer\timer3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\timer\timer2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\timer\timer4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\HardDriver\watch_dog\watch_dog.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\MSIS\core_cm3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\MSIS\system_stm32f10x.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\STlib\StartUp\startup_stm32f10x_md.s">
+			<Option compilerVar="ASM" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBitz_project_file>
