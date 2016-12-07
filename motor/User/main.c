@@ -5,6 +5,8 @@
 #include "eye_led_control.h"
 #include "top_ear_led_control.h"
 
+#define Version  310
+
 int main(void)
 {
 	app_init();
@@ -16,6 +18,9 @@ int main(void)
 		watchdog_feed();
 	}
 }
+
+
+
 
 
 
